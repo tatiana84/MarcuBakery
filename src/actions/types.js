@@ -1,0 +1,2 @@
+//SHOP
+export const SET_SHOP_PRODUCTS = 'SET_SHOP_PRODUCTS';

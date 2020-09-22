@@ -1,21 +1,26 @@
 import React, { Component } from 'react';
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
-import PortfolioContainer from "./portfolio/portfolio-container";
-import NavigationComponent from "./navigation/navigation-container";
+import NavigationContainer from "./navigation/navigation-container";
 import Home from "./pages/home";
 import AboutUs from "./pages/aboutUs";
 import Contact from "./pages/contact";
-import Menu from "./pages/menu";
+import Shop from "./shop/shop";
 
 export default class app extends Component {
   render() {
     return (
       <div className='app'>
-        <div className="logo_container">
-          <img className="logo_img" src="logo.jpg"/>
-        </div>
-        <NavigationComponent/>
-        <PortfolioContainer/>
+        <Router>
+          <NavigationContainer/>
+          <Switch>
+            <Route exact path="/" component={Home}/> 
+
+            <Route path="/aboutUs" component={AboutUs}/>
+            <Route path="/shop" component={Shop}/>
+            <Route path="/contact" component={Contact}/>
+          </Switch>
+        </Router>
       </div>
     );
   }

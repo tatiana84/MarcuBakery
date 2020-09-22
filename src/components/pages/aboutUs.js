@@ -1,9 +1,9 @@
 import React from "react";
 
+import NavigationContainer from "../navigation/navigation-container";
+
 export default function() {
     return (
-        <div>
-            About Us
-        </div>
+        <NavigationContainer/>
     );
 } 
