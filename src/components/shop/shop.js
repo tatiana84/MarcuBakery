@@ -18,13 +18,26 @@ class Shop extends Component {
         return (
             <div className='shop'>
                 <div className='shop__products'>
-                    <ShopProduct {...product} key={product._id} />
+                    {
+                        this.props.fetchShopProducts.map(product => {
+                            return (
+                                <ShopProduct {...product} key={product._id} />
+                            )
+                        })
+                    }
                 </div>
             </div>
         )
     }
 }
 
-//Shop = connect(mapStateToProps, actions)(Shop);
+function mapStateToProps(state) {
+    const { fetchShopProducts } = state.shop;
+    return {
+        fetchShopProducts
+    } 
+}
+
+Shop = connect(mapStateToProps, actions)(Shop);
 
 export default Shop;

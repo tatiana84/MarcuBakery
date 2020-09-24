@@ -7,7 +7,7 @@ import { connect } from 'react-redux';
 
 class ShopProduct extends Component {
     render() {
-        const { _id, name, description, price } = this.props;
+        const { id, name, description, price } = this.props;
         return (
             <div className='shop-product'>
                 <div className='shop-product__front'>
