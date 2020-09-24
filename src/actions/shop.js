@@ -15,7 +15,7 @@ export function fetchShopProducts() {
             },
             {
                 _id: 1,
-                image: ,
+                image: {},
                 name: "Cozonac",
                 description:"Cozonac cu nuca si ciocolata",
                 price: 80,
@@ -43,7 +43,7 @@ export function fetchShopProducts() {
             },
             {
                 _id: 5,
-                image: ,
+                image: src="../productImage/rulada-halva.jpg",
                 name: "Rulada",
                 description:"Rulada cu halva",
                 price: 70,
