@@ -5,7 +5,7 @@ import NavigationContainer from "./navigation/navigation-container";
 import Home from "./pages/home";
 import AboutUs from "./pages/aboutUs";
 import Contact from "./pages/contact";
-import Shop from "./shop/shop-detail";
+import Shop from "./pages/shop";
 
 export default class app extends Component {
   render() {

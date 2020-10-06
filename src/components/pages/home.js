@@ -1,11 +1,12 @@
 import React from "react";
 
-import PortfolioContainer from "../portfolio/portfolio-container";
+//import Slider from "../slider";
+import Slideshow from "../sliderS";
 
 export default function() {
     return (
         <div>
-            <PortfolioContainer/>
+            <Slideshow/>
         </div>
     );
 } 

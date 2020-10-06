@@ -18,7 +18,7 @@ export default class NavigationContainer extends Component {
                         <NavLink exact to="/" activeClassName="nav-link-active">Home</NavLink>
                     </div>
                     <div className="nav-link-wrapper">
-                        <NavLink exact to="/about-us" activeClassName="nav-link-active">About Us</NavLink>
+                        <NavLink exact to="/aboutUs" activeClassName="nav-link-active">About Us</NavLink>
                     </div>
                     <div className="nav-link-wrapper">
                         <NavLink exact to="/shop" activeClassName="nav-link-active">Shop</NavLink>

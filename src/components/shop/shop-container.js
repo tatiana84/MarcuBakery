@@ -25,24 +25,30 @@ export default class ShopContainer extends Component {
   }
 
   getShopItems(filter = null) {
-    axios
-      .get("https://bakeryproducts-0506.restdb.io/media/(id or filename)?key=22631469345172666884")
-      .then(response => {
-        if (filter) {
-          this.setState({
-            data: response.data.shop_items.filter(item => {
-              return item.category === filter;
-            })
-          });
-        } else {
-          this.setState({
-            data: response.data.shop_items
-          });
+    const url_temp_prefix = 'https://cors-anywhere.herokuapp.com/'; 
+    //const url = `${url_temp_prefix}https://frontdb-214a.restdb.io/rest/coll1`;
+    const url = `${url_temp_prefix}https://bakeryproducts-0506.restdb.io/rest/bakery`;
+     
+    const data =   {
+        "async": true,
+        "crossDomain": true,
+        "headers": {
+        "content-type": "application/json",
+        "x-apikey": "8b5e2e1cb8c2cc3be9622f06ca0958d1048d4",
+        "cache-control": "no-cache"
+      }};
+    
+    axios.get(url,data)
+    .then(response => {
+        console.log('responsesd',response.data);
+        this.setState({
+            data : response.data
         }
+    )
       })
-      .catch(error => {
-        console.log(error);
-      });
+    .catch(error => {
+        console.log('error',error);
+    });
   }
 
   shopItems() {
