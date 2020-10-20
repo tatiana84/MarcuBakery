@@ -12,13 +12,13 @@ export default class ShopItem extends Component {
 
   render() {
     const { id, image, name, description,  price } = this.props.item;
-    const img_url = 'https://bakeryproducts-0506.restdb.io/home/media';
+    const img_url = 'https://bakeryproducts-0506.restdb.io/media';
     return (
       <Link to={`/bakery/${id}`}>
         <div className="shop-item-wrapper">
           
           <div className="image">
-            <img src={img_url+'/'+item.image} />
+            <img src={img_url+'/'+image} />
           </div>
 
           <div className="name">Name: {name}</div>

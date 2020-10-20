@@ -35,9 +35,7 @@ export default class NavigationContainer extends Component {
                         <NavLink exact to="Login" activeClassName="nav-link-active">Log-in</NavLink>
                     </div>
                 </div>
-                <div className="portfolio-wrapper-motto">
-                    Gatit cu dragoste, savurat cu placere!
-                </div>
+                
             </div>
         );
     }

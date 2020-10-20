@@ -1,7 +1,14 @@
+//import {
+    //fetchShopProducts
+//} from './shop';
+
 import {
-    fetchShopProducts
-} from './shop';
+    fetchCartProducts,
+    addCartProduct
+} from './user';
 
 export {
-    fetchShopProducts
+    //fetchShopProducts,
+    fetchCartProducts,
+    addCartProduct,
 };
