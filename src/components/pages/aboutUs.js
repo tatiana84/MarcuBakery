@@ -3,9 +3,9 @@ import React, { Component } from "react";
 //import NavigationContainer from "../navigation/navigation-container";
 //import FooterContainer from "../navigation/footer-container";
 import M1 from "../../../static/assets/images/M1.jpg";
-import M2 from "../../../static/assets/images/M2.jpg";
+//import M2 from "../../../static/assets/images/M2.jpg";
 import M3 from "../../../static/assets/images/M3.jpg";
-import M4 from "../../../static/assets/images/M4.jpg";
+//import M4 from "../../../static/assets/images/M4.jpg";
 import Spice from "../../../static/assets/images/spice.jpg";
 
 export default class AboutUs extends Component {
@@ -15,7 +15,7 @@ export default class AboutUs extends Component {
                 <div className="page-content">
                     <div className="background-image" 
                         style={{
-                            background: "url(" + Spice +") no-repeat",
+                            background: {Spice},
                             backgroundSize: "cover",
                             backgroundPosition: "center"
                         }}>
@@ -32,9 +32,6 @@ export default class AboutUs extends Component {
                         solicitărilor și nu dispuneam de spațiu, am decis și am reușit să reamenajăm totul. 
                         Pe lângă plăcinte, am început să coacem pâinică bună.                  
                     </div>
-                    <div className="image-second">
-                        <img className="imgSecond" src={M2}/>
-                    </div>
                     <div className="second-text">         
                         Principalul produs tradițional al neamului – plăcinta, este copt zilnic cei câțiva
                         brutari angajați. Dacă gustați, cu siguranță o să vă mai întoarceți pentru plăcinta 
@@ -48,16 +45,14 @@ export default class AboutUs extends Component {
                         brutăria și cafeneaua au luat acest nume, fiind în continuă dezvoltare, diversificând mereu 
                         gama de produse, dar păstrând tradiția și rădăcinile integre. 
                     </div>
-                    <div className="image-third">
-                        <img className="imgThird" src={M3}/>
+                    <div className="image-second">
+                        <img className="imgSecond" src={M3}/>
                     </div>
                     <div className="four-text">
                         Am ales să facem pâine deoarece este un produs cu suflet, care hrănește suflete și care este practic
                         o necesitate zilnică. Coacem preparate cu specific tradițional, însă conform ultimelor tendințe: 
-                        avem pâine și cu făină integrală, plăcinte de foarte multe tipuri, conform sezonului.
-                    </div>
-                    <div className="image-four">
-                        <img className="imgFour" src={M4}/>
+                        avem pâine și cu făină integrală, plăcinte de foarte multe tipuri, conform sezonului. <br/>
+                        <p>"Noi gatim cu dragoste pentru a fi savurate produsele noastre cu placere!"</p>
                     </div>
                 </div>
                 
@@ -65,3 +60,10 @@ export default class AboutUs extends Component {
         );
     }
 } 
+
+/*<div className="image-second">
+    <img className="imgSecond" src={M2}/>
+</div> 
+<div className="image-four">
+    <img className="imgFour" src={M4}/>
+</div>*/

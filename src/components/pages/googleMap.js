@@ -8,7 +8,7 @@ export class MapContainer extends Component {
       <Map google={this.props.google} zoom={20}>
  
         <Marker onClick={this.onMarkerClick}
-            name={'Current location'} 
+          name={'M2, Peresecina'} 
         />
  
         <InfoWindow onClose={this.onInfoWindowClose}>
@@ -19,7 +19,7 @@ export class MapContainer extends Component {
 }
  
 export default GoogleApiWrapper({
-  apiKey: ('YOUR_GOOGLE_API_KEY_GOES_HERE')
+  apiKey: ('https://www.google.com/maps/dir/47.0178386,28.8369684/47.265201,28.773644/@47.1395347,28.7277182,11z/data=!3m1!4b1!4m4!4m3!1m1!4e1!1m0')
 })(MapContainer)
 //comes in the InfoWindow tag
 //<div>

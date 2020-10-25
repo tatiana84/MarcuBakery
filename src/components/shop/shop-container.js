@@ -1,7 +1,11 @@
 import React, { Component } from "react";
 import axios from "axios";
 
+//import { connect } from 'react-redux';
+//import * as actions from '../../actions';
 import ShopItem from "./shop-item";
+//import CartButton from "./cartButton";
+//import ShopCart from "./shopCart";
 
 export default class ShopContainer extends Component {
   constructor() {
@@ -61,6 +65,14 @@ export default class ShopContainer extends Component {
     this.getShopItems();
   }
 
+  /*handleAddToCart = () => {
+    if(document.getElementById('shop-cart').classList.contains('cart-hidden')) {
+      document.getElementById('shop-cart').classList.remove('cart-hidden');
+    } else {
+      document.getElementById('shop-cart').classList.add('cart-hidden');
+    }
+  }*/
+
   render() {
     if (this.state.isLoading) {
       return <div>Loading...</div>;
@@ -69,7 +81,12 @@ export default class ShopContainer extends Component {
     return (
       <div className="homepage-wrapper">
         <div className="shop-items-wrapper">{this.shopItems()}</div>
+        
       </div>
     );
   }
 }
+//CartButton was inside the div with the claseName shop-items-wrapper
+//{this.state.showCart ? <ShopCart className='shop__cart'/> : ''}
+//<CartButton onClick={this.handleAddToCart} className='shop__cart-button' icon='fas fa-cart-plus'/>
+//ShopContainer = connect(mapStateToProps, actions)(ShopContainer);
